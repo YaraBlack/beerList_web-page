@@ -1,2 +1,81 @@
 @import url("fonts.css");
 @import url("global.css");
+
+.background-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
+  background-image: url("../content/img/ellipse-top-right.svg"),
+    url("../content/img/ellipse-bottom-left.svg");
+}
+
+.intro-motto {
+  white-space: nowrap;
+  text-align: center;
+  font-weight: 600;
+  margin: 0 15px;
+  z-index: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.intro {
+  transition: opacity 2s ease-out;
+}
+
+.intro,
+.intro__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.intro h1 {
+  font-family: "Train One", serif;
+}
+
+.intro img {
+  max-width: 250px;
+  padding-left: 25px;
+}
+
+.header {
+  max-height: 100px;
+  padding: 10px;
+  display: flex;
+}
+
+.header img {
+  max-width: 30px;
+}
+
+@media (min-width: 576px) {
+  .intro__content-wrapper {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .intro__content-wrapper {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 992px) {
+  .intro__content-wrapper {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro__content-wrapper {
+    font-size: 36px;
+  }
+}
